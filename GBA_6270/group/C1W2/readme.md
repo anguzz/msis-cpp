@@ -300,9 +300,9 @@ devasc@labvm:~/C1W2$ cat common_attackers.txt
 
 
 #### Task 3-2 screenshot
-![terminal](screenshots\image-7.png)
-![terminal](screenshots\image-8.png)
-![terminal](screenshots\image-9.png)
+![terminal](screenshots/image-7.png)
+![terminal](screenshots/image-8.png)
+![terminal](screenshots/image-9.png)
 
 #### Task 3-2 shell output
 
@@ -482,4 +482,4 @@ The network's defenses successfully prevented a breach by blocking all intrusion
 
 #### Timeline chart.
 
-![timeline](screenshots\image-10.png)
+![timeline](screenshots/image-10.png)
