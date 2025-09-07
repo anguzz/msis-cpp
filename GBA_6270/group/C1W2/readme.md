@@ -482,4 +482,4 @@ The network's defenses successfully prevented a breach by blocking all intrusion
 
 #### Timeline chart.
 
-![timeline](screenshots\timeline.png)
+![timeline](screenshots\image-10.png)
