@@ -3,6 +3,11 @@
 
 The goal here is to create a master control VM to push down policies and security baselines to two VMs via SSH with Python, check compliance, and set up some automation.
 
+This assignment was completed in my **Proxmox-based homelab environment**: [https://github.com/anguzz/homelab](https://github.com/anguzz/homelab)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5e4e4363-afab-4c55-a151-9edac7b9ed57" width="300" alt="Proxmox Homelab Screenshot"/>
+</p>
 
 ### **Step 1: Environment Setup**
 
