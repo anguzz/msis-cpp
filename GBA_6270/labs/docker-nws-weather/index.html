@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NWS Weather (Lat/Lon)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>National Weather — 7‑Day Forecast</h1>
+    <p class="subtitle">Enter latitude and longitude (U.S. locations) and click <strong>Get Weather</strong>.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        Latitude
+        <input id="lat" type="number" step="0.0001" placeholder="e.g., 33.4484" />
+      </label>
+      <label>
+        Longitude
+        <input id="lon" type="number" step="0.0001" placeholder="e.g., -112.0740" />
+      </label>
+      <button id="getWeather">Get Weather</button>
+    </section>
+
+    <section id="status" aria-live="polite"></section>
+
+    <section id="location" class="card" hidden>
+      <h2 class="card-title">Location</h2>
+      <div id="placeText">—</div>
+    </section>
+
+    <section id="current" class="card" hidden>
+      <h2 class="card-title">Current Temperature</h2>
+      <div class="current-temp">
+        <div class="temp" id="tempF">— °F</div>
+        <div class="divider">|</div>
+        <div class="temp" id="tempC">— °C</div>
+      </div>
+      <div id="obsMeta" class="meta"></div>
+    </section>
+
+    <section id="forecast" class="card" hidden>
+      <h2 class="card-title">7‑Day Forecast (Highs)</h2>
+      <div id="forecastGrid" class="forecast-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Data from <a href="https://api.weather.gov" target="_blank" rel="noopener">National Weather Service</a>. This demo performs client‑side requests to the public API.</small>
+  </footer>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
