@@ -4,6 +4,9 @@ This is a single-page HTML/CSS/JS app that calls the National Weather Service (a
 - Current temperature in °C and °F
 - 7-day forecast (day names, highs in °C/°F, and conditions)
 
+
+<img width="1429" height="935" alt="image" src="https://github.com/user-attachments/assets/069f732f-fb6c-43e2-9ea4-bd0a2eeb6481" />
+
 ## Docker setup (mintOS)
 - Taken from Ubuntu setup docs at https://docs.docker.com/engine/install/ubuntu/
 
