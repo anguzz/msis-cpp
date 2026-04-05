@@ -130,6 +130,61 @@ A real-world example is the 2022 Uber security breach linked to the Lapsus$ hack
 - Rose, S., Borchert, O., Mitchell, S., & Connelly, S. (2020). *Zero Trust Architecture (NIST SP 800-207).* https://nvlpubs.nist.gov/nistpubs/specialpublications/NIST.SP.800-207.pdf  
 - BBC News. (2023). *Lapsus$: Court finds teenagers carried out hacking spree.* https://www.bbc.com/news/technology-66590477  
 
+
+# Week 8 – Amazon RDS vs EC2
+
+## Discussion Question(s)
+
+1. Between Amazon EC2 or Amazon RDS, which provides a managed service? What does managed service mean?  
+2. Is there any advantage of deploying Microsoft SQL Server on Amazon EC2 instead of Amazon RDS? Justify.  
+3. What advantage does the Quick Start provide over a manual installation on Amazon EC2?  
+4. Which deployment option offers the best approach for all use cases?  
+5. Which approach costs more: using Amazon EC2 or using Amazon RDS?  
+
+## Response
+
+Amazon RDS provides a managed service, while Amazon EC2 does not. A managed service means that AWS handles routine administrative tasks such as patching, backups, failover, and high availability. This reduces operational overhead and allows organizations to focus more on application development rather than infrastructure management.
+
+There are advantages to deploying Microsoft SQL Server on Amazon EC2. EC2 provides full control over the operating system, database configuration, and installed software. This is useful for organizations that require custom configurations, third-party integrations, or administrative access that is not supported in RDS. It is also beneficial for migrating legacy systems that depend on specific system-level settings.
+
+The AWS Quick Start provides a significant advantage over manual installation by automating the deployment process. It uses preconfigured templates to set up infrastructure, networking, and security best practices. This reduces human error, speeds up deployment, and ensures consistency across environments.
+
+There is no single best deployment option for all use cases. RDS is ideal for most standard workloads due to its ease of use and reduced management burden, while EC2 is better suited for highly customized or specialized requirements.
+
+In terms of cost, Amazon RDS is generally more expensive than EC2 because it includes managed services and automation features. However, the higher cost may be justified by reduced administrative effort and improved reliability.
+
+## References
+- Amazon Web Services. (n.d.-a). *What is Amazon RDS?* https://aws.amazon.com/rds/  
+- Amazon Web Services. (n.d.-b). *What is Microsoft SQL Server on Amazon EC2?* https://docs.aws.amazon.com/sql-server-ec2/latest/userguide/sql-server-on-ec2-overview.html  
+- Amazon Web Services. (2017). *The scoop on moving your Microsoft SQL Server to AWS.* https://aws.amazon.com/blogs/publicsector/the-scoop-on-moving-your-microsoft-sql-server-to-aws/  
+
+---
+
+# Week 9 – AWS Storage Security
+
+## Discussion Question(s)
+
+Amazon Web Services provides multiple storage solutions such as Amazon Elastic Block Store (EBS) and Amazon S3 object storage. Discuss the best practices for securing these storage services. In your response:
+
+- Identify at least two security practices for EBS and two for S3.  
+- Explain why these practices are important for protecting data.  
+- Provide an example of a potential security risk if these best practices are not followed.  
+
+## Response
+
+Securing AWS storage services such as Amazon EBS and Amazon S3 depends heavily on proper configuration and access control. For Amazon EBS, one important security practice is enabling encryption for volumes and snapshots using AWS KMS. This ensures that stored data remains protected even if the underlying storage is accessed improperly. Another key practice is restricting access through IAM roles and policies so that only authorized users or systems can create, attach, or modify volumes.
+
+For Amazon S3, a critical security practice is disabling public access at the bucket level unless it is explicitly required. Many data breaches occur due to misconfigured buckets that are unintentionally exposed to the internet. Additionally, enforcing encryption for both data at rest and in transit helps maintain confidentiality when storing and transferring data.
+
+These practices are important because they reduce the risk of unauthorized access and data exposure. Without encryption, sensitive data could be read if storage resources are accessed or shared incorrectly. Weak access controls can also allow attackers to misuse storage resources.
+
+For example, if an S3 bucket is left publicly accessible, confidential information such as financial records or user data could be exposed to anyone online. Similarly, if an unencrypted EBS snapshot is shared across accounts, another user could mount the volume and access sensitive system data.
+
+## References
+- Amazon Web Services. (2023). *AWS cloud security.* https://aws.amazon.com/security/  
+- Amazon Web Services. (n.d.). *Security best practices for Amazon S3.* https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html  
+
+
 ---
 
 ## AI Usage Statement
