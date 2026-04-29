@@ -180,12 +180,43 @@ These practices are important because they reduce the risk of unauthorized acces
 
 For example, if an S3 bucket is left publicly accessible, confidential information such as financial records or user data could be exposed to anyone online. Similarly, if an unencrypted EBS snapshot is shared across accounts, another user could mount the volume and access sensitive system data.
 
+
 ## References
 - Amazon Web Services. (2023). *AWS cloud security.* https://aws.amazon.com/security/  
 - Amazon Web Services. (n.d.). *Security best practices for Amazon S3.* https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html  
 
+---
+
+# Week 13 
+
+No discussions during weeks 10-12
+
+## Discussion Question(s)
+
+Looking ahead, do you think network-based controls (VPCs, subnets, VPNs) will become less important compared to identity-driven models like Zero Trust? Or will both continue to coexist? Defend your position with reasoning grounded in current cloud security trends.
+
+## Response
+
+Network-based controls such as VPCs, subnets, and VPNs will continue to coexist with identity-driven models like Zero Trust, rather than being replaced by them. While Zero Trust shifts security toward identity, authentication, and continuous verification, it does not eliminate the need for strong network controls. Instead, both approaches complement each other as part of a defense-in-depth strategy.
+
+One key reason is that identity systems are not immune to compromise. If an attacker gains access to a privileged account or hijacks an active session, they may be able to execute actions that appear legitimate from an identity perspective. In these cases, network based controls act as a critical secondary layer of defense. For example, inspecting and restricting east west traffic within a VPC can help detect or block suspicious lateral movement, even if the attacker is operating under valid credentials. Similarly, network segmentation and firewall rules can prevent unauthorized communication between workloads and limit the attacker’s ability to move freely or exfiltrate data.
+
+At the same time, Zero Trust enhances security by enforcing least privilege access and validating user and device context before granting access. This is especially important in cloud environments where traditional network perimeters are blurred. According to NIST, Zero Trust assumes that threats can exist both inside and outside the network, reinforcing the need for continuous verification (Rose et al., 2020).
+
+In conclusion, identity-driven models will take a leading role in modern cloud security, but network-based controls remain essential. Together, they provide layered protection, reducing risk even when one control fails.
+
+## References
+
+- Rose, S., Borchert, O., Mitchell, S., & Connelly, S. (2020). Zero trust architecture (NIST Special Publication 800-207). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-207 
+
+- Microsoft. (2023). Zero Trust security model. https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview
+
+- Amazon Web Services. (2023). Security best practices in AWS: Identity and access management. https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html 
 
 ---
 
 ## AI Usage Statement
 I used ChatGPT to help organize my ideas and improve clarity. The final writing and analysis are my own.
+
+
+
